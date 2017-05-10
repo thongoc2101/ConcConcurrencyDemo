@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -75,11 +76,18 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="740-DU-CFc">
-                        <barButtonItem key="rightBarButtonItem" title="Start" id="BUt-RJ-v1h">
-                            <connections>
-                                <action selector="didClickOnStart:" destination="BYZ-38-t0r" id="dbx-va-pcb"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="cancel" id="p6K-as-m3F">
+                                <connections>
+                                    <action selector="didClickOnCancel:" destination="BYZ-38-t0r" id="PFe-BT-c3j"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Start" id="BUt-RJ-v1h">
+                                <connections>
+                                    <action selector="didClickOnStart:" destination="BYZ-38-t0r" id="dbx-va-pcb"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView1" destination="S10-3H-623" id="lVZ-hd-XjF"/>
